@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function lineHeight($height, $fontSize) {
+  @return math.div($height, $fontSize);
+}

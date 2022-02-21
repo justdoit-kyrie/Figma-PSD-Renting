@@ -1,0 +1,177 @@
+.service {
+  padding: var(--spacing) 0;
+
+  &-image {
+    position: absolute;
+    left: 0;
+
+    width: 65rem;
+    height: 59rem;
+
+    border-radius: 0 1.2rem 1.2rem 0;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      padding: 3.3rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: $purple-color;
+      font-size: 2.5rem;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        background: #ffffff;
+        opacity: 0.5;
+
+        border-radius: 1rem;
+      }
+
+      ion-icon {
+        opacity: 1;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-main {
+    display: flex;
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 52rem;
+    margin-left: auto;
+  }
+
+  &-info {
+    width: 100%;
+    max-width: 38rem;
+    margin-bottom: 1rem;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-item {
+    background: transparent;
+    padding: 4rem;
+
+    display: flex;
+    align-items: center;
+    gap: 3.6rem;
+
+    border-radius: 1.2rem;
+    transition: all 0.2s linear;
+
+    &-icon {
+      padding: 1.7rem;
+      background: $blue-color;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 6px;
+
+      color: $purple-color;
+
+      transition: all 0.2s linear;
+
+      ion-icon {
+        font-size: 2.5rem;
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: lineHeight(36, 24);
+    }
+
+    &-desc {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: lineHeight(24, 16);
+      color: $sub-text-color;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      .service-item-icon {
+        background: $purple-color;
+        color: #fff;
+      }
+    }
+  }
+
+  @include maxWidth(1279px) {
+    &-image {
+      width: 45rem;
+    }
+  }
+
+  @include maxWidth(1023px) {
+    &-main {
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    &-info {
+      max-width: 100%;
+    }
+
+    &-image {
+      width: 100%;
+      position: relative;
+
+      border-radius: 1rem;
+    }
+
+    &-content {
+      margin-left: revert;
+    }
+  }
+
+  @include maxWidth(1023px) {
+    &-image {
+      height: 35rem;
+    }
+
+    &-item {
+      padding: 2rem;
+
+      &-title {
+        font-size: 2rem;
+      }
+
+      &-desc {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

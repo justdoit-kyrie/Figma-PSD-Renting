@@ -1,0 +1,265 @@
+.wrapper {
+  max-width: $wrapper;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  max-width: $container + 30px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &--outline {
+    background: transparent;
+    border: 1px solid $purple-color;
+    color: $purple-color;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background: $purple-color;
+      color: #fff;
+    }
+  }
+
+  &--circle {
+    border-radius: 100rem;
+  }
+
+  &--primary {
+    background: $purple-color;
+    color: #fff;
+  }
+
+  &--secondary {
+    background: #fff;
+    color: $purple-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.global {
+  &-statictis {
+    width: 24rem;
+    min-height: 19rem;
+
+    border-radius: 2rem;
+
+    padding: 2.5rem 3rem;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    &-number {
+      font-weight: 600;
+      font-size: 2.6rem;
+      line-height: lineHeight(39, 26);
+    }
+
+    &-desc {
+      color: $sub-text-color;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    @include maxWidth(767px) {
+      padding: 2rem;
+      width: 15rem;
+      min-height: unset;
+      gap: 1rem;
+
+      &-number {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &-position {
+    padding: 2rem;
+
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+
+    border-radius: 2rem;
+
+    width: 100%;
+    max-width: 38rem;
+
+    &-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      &-price {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: lineHeight(45, 30);
+      }
+
+      &-way {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: lineHeight(21, 14);
+      }
+
+      &-list {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        & > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $gray-color-blur;
+          padding: 0.75rem;
+          border-radius: 100rem;
+        }
+
+        & > span {
+          font-weight: 500;
+          font-size: 1.4rem;
+          line-height: lineHeight(21, 14);
+          color: $sub-text-color;
+        }
+      }
+    }
+
+    @include maxWidth(767px) {
+      display: none;
+    }
+  }
+
+  &-info {
+    padding: 3.5rem 3.5rem;
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    width: 100%;
+    max-width: 33rem;
+    border-radius: 2rem;
+
+    &-price {
+      font-weight: 600;
+      font-size: 3rem;
+      line-height: lineHeight(45, 30);
+    }
+
+    &-desc {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: lineHeight(27, 18);
+      color: $sub-text-color;
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      & > span {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: lineHeight(21, 14);
+        color: $gray-color;
+      }
+    }
+
+    &-list {
+      display: flex;
+      gap: 1.2rem;
+
+      max-height: 4.4rem;
+
+      img {
+        height: 100%;
+        width: 4.4rem;
+        object-fit: cover;
+      }
+    }
+
+    &-item {
+      padding: 1.2rem;
+      background: $heading-text-color;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: lineHeight(21, 14);
+
+      border-radius: 8px;
+    }
+
+    @include maxWidth(767px) {
+      display: none;
+    }
+  }
+
+  &-content {
+    &-title {
+      font-weight: 600;
+      font-size: 4.6rem;
+      line-height: lineHeight(56, 46);
+    }
+
+    &-desc {
+      font-weight: 500;
+      font-size: 1.8rem;
+      line-height: lineHeight(30, 18);
+      color: $sub-text-color;
+    }
+
+    @include maxWidth(767px) {
+      max-width: 100%;
+
+      &-title {
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

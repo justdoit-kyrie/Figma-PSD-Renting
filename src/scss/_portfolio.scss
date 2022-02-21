@@ -1,0 +1,76 @@
+.portfolio {
+  padding: 7.4rem 0;
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-content {
+    width: 100%;
+    max-width: 62.3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  &-list {
+    display: flex;
+    gap: 4.5rem;
+
+    margin: var(--spacing) 0;
+  }
+
+  &-item {
+    flex: 1;
+    position: relative;
+    border-radius: 10px;
+
+    overflow: hidden;
+  }
+
+  &-info {
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: rgba(0, 0, 0, 0.47);
+    box-shadow: 0px 40px 90px rgba(0, 0, 0, 0.14);
+
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 2rem 3.5rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include maxWidth(1023px) {
+    &-list {
+      flex-direction: column;
+    }
+
+    &-item {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

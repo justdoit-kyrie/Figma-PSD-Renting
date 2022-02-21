@@ -1,0 +1,27 @@
+// font
+$primary-font: "Poppins", sans-serif;
+
+// size
+$wrapper: 1440px;
+$container: 1170px;
+
+// color
+$text-color: #00005c;
+$sub-text-color: #627193;
+$heading-text-color: #00005c;
+$purple-color: #3c50e0;
+$gray-color: #818da9;
+$gray-color-blur: #ebebeb;
+$blue-color: #f5fafe;
+
+:root {
+  --spacing: 9rem;
+
+  @include maxWidth(1279px) {
+    --spacing: 7rem;
+  }
+
+  @include maxWidth(1023px) {
+    --spacing: 5rem;
+  }
+}
